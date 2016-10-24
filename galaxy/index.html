@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -268,95 +268,81 @@ body.shown-menu-left .page {
     </li>
     <li class="header"><span class="item-header no-sub">Contents</span></li>
     <li class="item"><span class="item-header no-sub">Abstract</span></li>
-    <li class="item"><span class="item-header">Header</span>
+    <li class="item"><span class="item-header">Galaxies</span>
       <ul>
-        <li class="item"><span>Abstract</span>
-          <ul>
-            <li class="item">Item</li>
-          </ul>
-        </li>
-        <li class="item"><span>Abstract</span>
-          <ul>
-            <li class="item">Item</li>
-          </ul>
-        </li>
+        <li class="item"><span>About</span></li>
       </ul>
     </li>
   </ul>
+  
   <article class="page">
-    <h1>Planets</h1>
+    <h1>Galaxies</h1>
     <table class="info hidden-large">
       <tr>
         <td><b>Type</b></td>
-        <td>Planets</td>
+        <td>Galaxy</td>
       </tr>
     </table>
     <section>
-      <h2>Header 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    <section>
-      <h2>Header 3</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    <section>
-      <h2>Header 4</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>About</h2>
+      <p>Their are a plethora of galaxies in the <a href="/wiki/about/">Congeria</a> <a href="/wiki/universe/">Universe.</a></p>
     </section>
   </article>
+  
   <ul class="menu-right">
-    <li class="header">Planets</li>
-    <li class="item"><img src="https://placehold.it/350x150"/></li>
+    <li class="header">Galaxies</li>
+    <li class="item"><img src="https://placehold.it/350x150" alt="Placeholder image from Placehold.it"/></li>
     <li class="item table">
       <table class="info">
         <tr>
           <td><b>Type</b></td>
-          <td>Planets</td>
+          <td>Galaxy</td>
         </tr>
       </table>
     </li>
   </ul>
+  
   <script src="https://use.fontawesome.com/f40007b752.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
   <script>
     (function() {
-
-  _.forEach([".page", ".menu-right", ".menu-left"], function(value) {
-    Ps.initialize(document.querySelector(value))
-  })
-
-  document.getElementById('show-menu-left').addEventListener('click', function() {
-    document.body.classList.toggle('shown-menu-left')
-  })
-
-  if (screen.width < 700) {
-    document.body.classList.remove('shown-menu-left')
-  }
-
-  var li_ul = document.querySelectorAll(".col_ul li  ul");
-  for (var i = 0; i < li_ul.length; i++) {
-    li_ul[i].style.display = "none"
-  }
-
-  var exp_li = document.querySelectorAll(".col_ul li > span");
-  for (var i = 0; i < exp_li.length; i++) {
-    exp_li[i].style.cursor = "pointer"
-    if (exp_li[i].classList.contains('no-sub')) {
-      // Solves the display error
-    } else {
-      exp_li[i].onclick = showul
-    }
-  }
-
-  function showul() {
-    let nextul = this.nextElementSibling;
-    if (nextul.style.display == "block")
-      nextul.style.display = "none"
-    else
-      nextul.style.display = "block"
-  }
-})();
+      _.forEach([".page", ".menu-right", ".menu-left"], function(value) {
+        Ps.initialize(document.querySelector(value))
+      })
+      
+      document.getElementById('show-menu-left').addEventListener('click', function() {
+        document.body.classList.toggle('shown-menu-left')
+      })
+      
+      if (screen.width < 700) {
+        document.body.classList.remove('shown-menu-left')
+      }
+      
+      var li_ul = document.querySelectorAll(".col_ul li  ul");
+      for (var i = 0; i < li_ul.length; i++) {
+        li_ul[i].style.display = "none"
+      }
+      
+      var exp_li = document.querySelectorAll(".col_ul li > span");
+      for (var i = 0; i < exp_li.length; i++) {
+        exp_li[i].style.cursor = "pointer"
+        if (exp_li[i].classList.contains('no-sub')) {
+          // Solves the display error
+        } else {
+          exp_li[i].onclick = showul
+        }
+      }
+      
+      function showul() {
+        let nextul = this.nextElementSibling;
+        if (nextul.style.display == "block") {
+          nextul.style.display = "none"
+        } else {
+          nextul.style.display = "block"
+        }
+      }
+    })();
   </script>
 </body>
 
